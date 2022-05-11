@@ -1,0 +1,7 @@
+names:
+- no_helmet
+- helmet
+- earphone
+nc: 3
+train: C:/Users/leeyj/Desktop/yolo/dataset/train.txt
+val: C:/Users/leeyj/Desktop/yolo/dataset/val.txt
