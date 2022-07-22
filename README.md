@@ -39,3 +39,8 @@
 ![1](https://user-images.githubusercontent.com/100258615/180347510-da253e80-7f10-4cbd-b49e-0ce5fd49e0d1.PNG)
 ![2](https://user-images.githubusercontent.com/100258615/180347512-2e19f8c6-ebd4-4051-aa85-56b6f7bf6d7a.PNG)
 ## 데이터 증식
+* 데이터 Augmentation 진행
+ * 좀 더 robust 한 성능을 위해 이미지 변형과 동시에 증강
+ * Albumentations 라이브러리 이용
+ * 해당 라이브러리 이용하면 이미지 변형과 동시에 라벨도 변형가능
+![image](https://user-images.githubusercontent.com/100258615/180348041-d34b6584-b189-406e-ab2f-62deb5bb98de.png)
