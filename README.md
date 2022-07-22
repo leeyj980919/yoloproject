@@ -60,11 +60,14 @@
   * 1000 (early stopping 적용, patience: 100)  
 * learning rate
   * 0.01
-### 학습결과
+# 학습결과(best model)
 * 가장 성능이 좋았던 모델은 SGD로 최적화한 모델
 * early stop으로 총 447 epoch 학습
 * mAP@0.5 = 0.93
 * mAP@0.5:0.95 = 0.82 
 ### 실제 시연
+![earphone+helmet](https://user-images.githubusercontent.com/100258615/180366045-bf7647e7-624e-48e9-a291-333f54c41d4c.gif)
+![headphone](https://user-images.githubusercontent.com/100258615/180366173-4e6eff2b-a059-4ab9-9d42-cd0cb861f27c.gif)
+![nohelmet+earphone](https://user-images.githubusercontent.com/100258615/180366215-a9ccf198-fe6e-42f1-ba03-bdebebae9a29.gif)
 
 * Adam으로 학습한 모델은 이어폰에 대해 FP가 많았음.
