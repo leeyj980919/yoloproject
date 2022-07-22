@@ -44,3 +44,12 @@
  * Albumentations 라이브러리 이용
  * 해당 라이브러리 이용하면 이미지 변형과 동시에 라벨도 변형가능
 ![image](https://user-images.githubusercontent.com/100258615/180348041-d34b6584-b189-406e-ab2f-62deb5bb98de.png)
+# 학습
+* optimizer
+  * SGD, Adam
+* batch size
+  * 64
+* epochs
+  * 1000 (early stopping 적용, patience: 100)  
+* learning rate
+  * 0.01
