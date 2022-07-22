@@ -65,6 +65,18 @@
 * early stop으로 총 447 epoch 학습
 * mAP@0.5 = 0.93
 * mAP@0.5:0.95 = 0.82 
+
+### [실제 시연(Adam 최적화)]
+![earphoneFP](https://user-images.githubusercontent.com/100258615/180369154-da03fb20-6d19-40f5-b6b6-8f542bf87604.gif)<br>
+* Adam으로 최적화한 모델은 **이어폰**에 대해 **오탐**이 큼 -> 실제 서비스 응용 시 오히려 **주행에 방해**가 됨
+  * 귀의 음영만 보고 이어폰착용으로 탐지하는 경향
+  * 이어폰은 **보수적으로 탐지**하는 것이 좋다고 판단
+  
+* 실험계획
+  * bounding box 내부 작은 객체인 이어폰 탐지에 어려움을 겪음
+    * Augmentation으로 인한 과도한 일반화로 이어폰 오탐이 증가하여 증강데이터 과감히 삭제
+  * 좀 더 보수적인 탐지, 이어폰 착용 label에 대한 가중치 업데이트를 줄이기 위해 정면 착용사진 삭제
+    
 ### [실제 시연(SGD 최적화)]
 ![earphone+helmet](https://user-images.githubusercontent.com/100258615/180366045-bf7647e7-624e-48e9-a291-333f54c41d4c.gif)
 ![headphone](https://user-images.githubusercontent.com/100258615/180366173-4e6eff2b-a059-4ab9-9d42-cd0cb861f27c.gif)
@@ -72,14 +84,5 @@
 
 * 4가지 Class:  헬멧 미착용, 헬멧 착용, 이어폰 착용, 헤드폰 착용 모두 탐지
 * 제대로 착용하지 않으면 헬멧 미착용으로 탐지
+* 좀 더 보수적인 이어폰 탐지성능
 * bounding box가 겹치는 경우, FN가 높아지는 경향<br>
-
-### [실제 시연(Adam 최적화)]
-![earphoneFP](https://user-images.githubusercontent.com/100258615/180369154-da03fb20-6d19-40f5-b6b6-8f542bf87604.gif)<br>
-* Adam으로 최적화한 모델은 이어폰에 대해 오탐이 큼 -> 실제 서비스 응용 시 오히려 주행에 방해가 됨
-  * 귀의 음영만 보고 이어폰착용으로 탐지하는 경향
-  * 이어폰은 보수적으로 탐지하는 것이 좋다고 판단
-  
-* 학습과 검증
-  * Augmentation 
-
