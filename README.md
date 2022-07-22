@@ -22,29 +22,29 @@
   * 이미지 전체를 학습하기 때문에 맥락학습 가능
   * 기존 객체탐지 알고리즘보다 높은 FPS와 높은 mAP -> **실시간객체탐지에 유리**
 # 데이터
-### 사용될 데이터
+### [사용될 데이터]
 1. 헬멧 착용 사진
 2. 헬멧 미착용 사진
 3. 이어폰 착용한 귀 사진
 4. 헤드폰 착용 사진<br>
 
-### 데이터 수집 방법
+### [데이터 수집 방법]
 ![image](https://user-images.githubusercontent.com/100258615/180339274-494aaeef-5706-4408-8ba2-1c57447131fe.png)
 1. 오픈소스로 공개된 데이터셋 사용
 2. 구글 웹크롤링을 통해 다양한 데이터수집<br><br>
 ![1](https://user-images.githubusercontent.com/100258615/180339995-6f3611c0-f86a-4198-99c7-9849674a4fef.PNG)
 3. 미흡한 부분, 직접 영상 촬영 후 프레임단위로 나눠 데이터셋화
 ![2](https://user-images.githubusercontent.com/100258615/180339999-4a7af902-1e1f-4143-97cb-16c28e877da9.PNG)
-### 데이터 전처리
+### [데이터 전처리]
 ![1](https://user-images.githubusercontent.com/100258615/180347510-da253e80-7f10-4cbd-b49e-0ce5fd49e0d1.PNG)
 ![2](https://user-images.githubusercontent.com/100258615/180347512-2e19f8c6-ebd4-4051-aa85-56b6f7bf6d7a.PNG)
-### 데이터 증식
+### [데이터 증식]
 * 데이터 Augmentation 진행
  * 좀 더 robust 한 성능을 위해 이미지 변형과 동시에 증강
  * Albumentations 라이브러리 이용
  * 해당 라이브러리 이용하면 이미지 변형과 동시에 라벨도 변형가능
 ![image](https://user-images.githubusercontent.com/100258615/180348041-d34b6584-b189-406e-ab2f-62deb5bb98de.png)
-### 최종 데이터셋
+### [최종 데이터셋]
 ![image](https://user-images.githubusercontent.com/100258615/180362545-aab28262-77ee-4e4a-8a26-872938f96ef8.png)
 * 헬멧미착용: 2371
 * 헬멧착용: 2497
@@ -60,14 +60,19 @@
   * 1000 (early stopping 적용, patience: 100)  
 * learning rate
   * 0.01
-# 학습결과(best model)
+# 학습결과
 * 가장 성능이 좋았던 모델은 SGD로 최적화한 모델
 * early stop으로 총 447 epoch 학습
 * mAP@0.5 = 0.93
 * mAP@0.5:0.95 = 0.82 
-### 실제 시연
+### [실제 시연(SGD 최적화)]
 ![earphone+helmet](https://user-images.githubusercontent.com/100258615/180366045-bf7647e7-624e-48e9-a291-333f54c41d4c.gif)
 ![headphone](https://user-images.githubusercontent.com/100258615/180366173-4e6eff2b-a059-4ab9-9d42-cd0cb861f27c.gif)
 ![nohelmet+earphone](https://user-images.githubusercontent.com/100258615/180366215-a9ccf198-fe6e-42f1-ba03-bdebebae9a29.gif)
 
-* Adam으로 학습한 모델은 이어폰에 대해 FP가 많았음.
+* 4가지 Class:  헬멧 미착용, 헬멧 착용, 이어폰 착용, 헤드폰 착용 모두 탐지
+* 제대로 착용하지 않으면 헬멧 미착용으로 탐지
+* bounding box가 겹치는 경우, FN가 높아지는 경향<br>
+
+### [실제 시연(Adam 최적화)]
+
