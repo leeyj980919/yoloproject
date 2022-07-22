@@ -75,4 +75,11 @@
 * bounding box가 겹치는 경우, FN가 높아지는 경향<br>
 
 ### [실제 시연(Adam 최적화)]
+![earphoneFP](https://user-images.githubusercontent.com/100258615/180369154-da03fb20-6d19-40f5-b6b6-8f542bf87604.gif)<br>
+* Adam으로 최적화한 모델은 이어폰에 대해 오탐이 큼 -> 실제 서비스 응용 시 오히려 주행에 방해가 됨
+  * 귀의 음영만 보고 이어폰착용으로 탐지하는 경향
+  * 이어폰은 보수적으로 탐지하는 것이 좋다고 판단
+  
+* 학습과 검증
+  * Augmentation 
 
