@@ -35,4 +35,7 @@
 ![1](https://user-images.githubusercontent.com/100258615/180339995-6f3611c0-f86a-4198-99c7-9849674a4fef.PNG)
 3. 미흡한 부분, 직접 영상 촬영 후 프레임단위로 나눠 데이터셋화
 ![2](https://user-images.githubusercontent.com/100258615/180339999-4a7af902-1e1f-4143-97cb-16c28e877da9.PNG)
-
+## 데이터 전처리
+![1](https://user-images.githubusercontent.com/100258615/180347510-da253e80-7f10-4cbd-b49e-0ce5fd49e0d1.PNG)
+![2](https://user-images.githubusercontent.com/100258615/180347512-2e19f8c6-ebd4-4051-aa85-56b6f7bf6d7a.PNG)
+## 데이터 증식
