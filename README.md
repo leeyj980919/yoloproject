@@ -45,7 +45,7 @@
  * 해당 라이브러리 이용하면 이미지 변형과 동시에 라벨도 변형가능
 ![image](https://user-images.githubusercontent.com/100258615/180348041-d34b6584-b189-406e-ab2f-62deb5bb98de.png)
 ## 최종 데이터셋
-![image](https://user-images.githubusercontent.com/100258615/180362209-3cc49461-6a53-4168-b383-d57f141d0cac.png)
+![image](https://user-images.githubusercontent.com/100258615/180362545-aab28262-77ee-4e4a-8a26-872938f96ef8.png)
 * 헬멧미착용: 2371
 * 헬멧착용: 2497
 * 이어폰 착용: 2109
